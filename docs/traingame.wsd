@@ -1,0 +1,45 @@
+@startuml traingame
+
+object traingame
+    object track
+        object lenght
+    object train
+        object bagoons
+            object maxWight
+        object mainBagoon
+            object engine
+        object actions{
+            accelerate
+            stop
+            clackson
+        }
+    object player
+        object name
+        object playerActions{
+            moveTrain
+            stopTrain
+            soundClackson
+        }
+
+traingame *-- track
+traingame *-- train
+traingame *-- player
+
+track *-- lenght
+track o-right- train
+
+train *-- bagoons
+train *-- mainBagoon
+
+bagoons *-- maxWight
+
+mainBagoon *-- engine
+mainBagoon <|-left- bagoons
+
+train o-- actions
+train *-- playerActions
+
+player o-right- name
+player o-- playerActions
+
+@enduml
