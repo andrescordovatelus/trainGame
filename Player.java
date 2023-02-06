@@ -1,13 +1,14 @@
-public class User extends UserActions{
+public class Player {
     private String name;
     private int age;
     private boolean license;
+    private Train train;
 
-    public User(String name, int age, boolean license){
-        super(100.00, 1, 100);
+    public Player(String name, int age, boolean license, Train train){
         this.name = name;
         this.age = age;
         this.license = license;
+        this.train = train;
     }
 
     public String getName() {
@@ -33,6 +34,20 @@ public class User extends UserActions{
     public void setLicense(boolean license) {
         this.license = license;
     }
+
+    //--------------------------------------
+    public void moveTrain(){
+        train.accelerate();
+    }
+
+    public void stopTrain(){
+        train.stop();
+    }
+
+    public void soundClackson(){
+        train.soundClackson();
+    }
+    //--------------------------------------
 
     public void getUserInformation(){
         if(license == true){

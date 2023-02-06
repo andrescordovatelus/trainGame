@@ -20,14 +20,14 @@ public class MainBagoon extends Bagoons{
     }
 
     public void accelerate(){
-        System.out.println("> The train is acelerating at " + (enginePower - (nBagoons * 5)) + " km/h");
+        System.out.println("> The train is acelerating at " + (enginePower - (nBagoons * 5)) + " km/h with " + nBagoons + " bagoons.");
     }
 
     public void stop(){
-        System.out.println("> The train is braking at " + (enginePower + (nBagoons * 5)) + " km/h");
+        System.out.println("> The train is braking at " + (enginePower + (nBagoons * 5)) + " km/h againts");
     }
 
     public void soundClackson(){
-        System.out.println("> Clackson sound");
+        System.out.println("> Clackson sound **********");
     }
 }

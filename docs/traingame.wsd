@@ -34,12 +34,12 @@ train *-- mainBagoon
 bagoons *-- maxWight
 
 mainBagoon *-- engine
-mainBagoon <|-left- bagoons
+mainBagoon -left-|> bagoons
 
 train o-- actions
-train *-- playerActions
+player *-- playerActions
 
 player o-right- name
-player o-- playerActions
+player -left-> train
 
 @enduml
