@@ -1,30 +1,13 @@
 public class Bagoons{
 
-    public Double maxWeight;
-    public int nBagoons;
+    private int weight;
 
-    public Bagoons(Double maxWeight, int nBagoons){
-        this.maxWeight = maxWeight;
-        this.nBagoons = nBagoons;
+    public Bagoons(int weight) {
+        this.weight = weight;
     }
 
-    public Double getMaxWeight() {
-        return maxWeight;
+    public int getSlowDown(){
+        return weight;
     }
 
-    public int getnBagoons() {
-        return nBagoons;
-    }
-
-    public void setMaxWeight(Double maxWeight) {
-        this.maxWeight = maxWeight;
-    }
-
-    public void setnBagoons(int nBagoons) {
-        this.nBagoons = nBagoons;
-    }
-
-    public void addBagoons(int nBagoons){
-        this.nBagoons += nBagoons;
-    }
 }

@@ -1,33 +1,12 @@
-public class MainBagoon extends Bagoons{
-    
-    public int enginePower;
+public class MainBagoon{
 
-    public MainBagoon(Double maxWeight, int nBagoons, int enginePower){
-        super(maxWeight, nBagoons);
-        this.enginePower = enginePower;
+    private int motorForce;
+
+    public MainBagoon(int motorForce) {
+        this.motorForce = motorForce;
     }
 
-    public int getEnginePower() {
-        return enginePower;
-    }
-
-    public void setEnginePower(int enginePower) {
-        this.enginePower = enginePower;
-    }
-
-    public void torqueForce(){
-        System.out.println("> Torque force is " + (enginePower - (nBagoons * 5)));
-    }
-
-    public void accelerate(){
-        System.out.println("> The train is acelerating at " + (enginePower - (nBagoons * 5)) + " km/h with " + nBagoons + " bagoons.");
-    }
-
-    public void stop(){
-        System.out.println("> The train is braking at " + (enginePower + (nBagoons * 5)) + " km/h againts");
-    }
-
-    public void soundClackson(){
-        System.out.println("> Clackson sound **********");
+    public int getMotorForce() {
+        return this.motorForce;
     }
 }

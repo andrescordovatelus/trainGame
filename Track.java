@@ -1,15 +1,25 @@
 public class Track {
-    public int lenght;
+    
+    private Train train;
+    private int size;
 
-    public Track(int lenght){
-        this.lenght = lenght;
+    public Track(int size) {
+        this.size = size;
     }
 
-    public void getLenght() {
-        System.out.println("> The track lenght is " + lenght + " meters.");
+    public void setTrain(Train train){
+        this.train = train;
     }
 
-    public void setLenght(int lenght) {
-        this.lenght = lenght;
+    public void paint(){
+        int trainPosition = train.getPosition();
+        for (int i = 0; i < size; i++) {
+            if (trainPosition == i) {
+                System.out.print(train.getCharacter());
+            }
+            else{
+                System.out.print("_");
+            }
+        }
     }
 }
