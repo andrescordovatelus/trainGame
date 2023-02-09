@@ -7,7 +7,8 @@ object traingame
         object bagoons
             object maxWight
         object mainBagoon
-            object engine
+            object motorForce
+        object passengerBagoon
         object actions{
             accelerate
             stop
@@ -30,10 +31,11 @@ track o-right- train
 
 train *-- bagoons
 train *-- mainBagoon
+train *-- passengerBagoon
 
 bagoons *-- maxWight
 
-mainBagoon *-- engine
+mainBagoon *-- motorForce
 mainBagoon -left-|> bagoons
 
 train o-- actions

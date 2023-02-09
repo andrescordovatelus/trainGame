@@ -1,4 +1,4 @@
-public class Player {
+public abstract class Player {
     
     private String name;
     private int age;
@@ -31,4 +31,6 @@ public class Player {
     public void soundClackson(){
         train.clakson();
     }
+
+    public abstract int getOption();
 }

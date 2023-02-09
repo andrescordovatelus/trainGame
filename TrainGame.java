@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class TrainGame {
 
     private Player player;
@@ -7,7 +5,7 @@ public class TrainGame {
     private Track track;
 
     public void setup() {
-        player = new Player("Andres", 21, 1);
+        player = new Computer("Andres", 21, 1);
         train = new Train(new MainBagoon(16), 'O');
         train.setup();
         player.setTrain(train);
@@ -27,9 +25,7 @@ public class TrainGame {
             System.out.println("> 4. Exit.");
             System.out.println("> ---------------------------------");
 
-            Scanner entrada = new Scanner(System.in);
-
-            option = Integer.parseInt(entrada.nextLine());
+            option = player.getOption();
             System.out.println("> ---------------------------------");
 
             switch(option){
